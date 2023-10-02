@@ -1,0 +1,31 @@
+Create an SQL lite data base from Coles JSON data
+Design prompt to extract list of ingredients from recipe
+Chain prompt to query database with required ingredients
+    - What if we just use a Pandas df?
+    - df.Series.str.contains(str())
+
+    - Retrieving entries from the database is a problem because an exact match is needed
+    - A vector database might be a better solution because the program can search for entries with a combination of
+      keyword matching and semantic search - a hybrid search.
+    - Need to write a script that converts each entry in the json file to:
+      -> {'id': 'vec1',
+         'values': [0.1, 0.2, 0.3], -> This will be the tokenized "title" + "Price" + "Price Calculation"
+         'metadata': {'genre': 'drama'}, -> Meta data could be "category" or a summary of the title(?)
+         'sparse_values': {
+             'indices': [10, 45, 16],
+             'values': [0.5, 0.5, 0.2]
+         }}, -> I dont know what sparse values are.
+        {'id': 'vec2',
+         'values': [0.2, 0.3, 0.4],
+         'metadata': {'genre': 'action'},
+         'sparse_values': {
+             'indices': [15, 40, 11],
+             'values': [0.4, 0.5, 0.2]
+         }}
+
+    - {"title": "Coles RSPCA Approved Chicken Drumsticks Large Pack | approx 1.6kg", "price": "$6.40", "price_calculation": "$4.00 per 1kg", "category": "Dropped & Locked"}
+
+Store result in some sort of data structure
+Write algorithm to determine most appropriate product to recommend purchasing based on best value for money
+Return finished list of products
+

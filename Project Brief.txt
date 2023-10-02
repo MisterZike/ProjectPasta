@@ -1,0 +1,14 @@
+------------------------------------------------------------------------------------------------------------------------
+                                                   PROJECT PASTA
+------------------------------------------------------------------------------------------------------------------------
+
+Objective:
+Design and create a web application that provides recipes and ingredients for a desired dish, with prices and nutrition
+information.
+
+Requirements:
+1) Web interface
+2) Ability for the user to type their desired dish
+3) Ability to provide a list of required ingredients with quantities/measurements
+4) Ability to calculate and display costs to purchase ingredients
+5) Ability to display an estimate of total nutritional information based on the ingredients
